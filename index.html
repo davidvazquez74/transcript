@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grabación de Reuniones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <h1>Grabación</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="icon-wrapper">
+        <span class="mic-icon">🎤</span>
+      </div>
+      <h2>Grabación de Reuniones</h2>
+      <p class="subtitle">Pulsa el botón para comenzar</p>
+
+      <div class="timer" id="timer">00:00</div>
+
+      <button id="record-btn" class="btn btn-record">
+        <span class="btn-icon">🎙️</span>
+        <span id="record-btn-label">Iniciar Grabación</span>
+      </button>
+
+      <button id="history-btn" class="btn btn-history">
+        <span class="btn-icon">🕒</span>
+        Ver Historial
+      </button>
+
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="card" id="history-card" hidden>
+      <div class="history-header">
+        <h2>Historial de Grabaciones</h2>
+        <button id="close-history" class="btn-small">Cerrar</button>
+      </div>
+      <ul id="history-list" class="history-list"></ul>
+      <p class="history-note">
+        El historial se guarda solo en este dispositivo (localStorage).
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
